@@ -19,7 +19,7 @@ public class GymlabApplication {
 
         GymLeaderService leader = context.getBean(GymLeaderService.class);
 
-        leader.openGymBattle();
+        //leader.openGymBattle();
 
 
         context.close();

@@ -13,14 +13,12 @@ public class GymlabApplication {
 
         ConfigurableApplicationContext context = SpringApplication.run(GymlabApplication.class, args);
 
-        //BattlePokemon battlePokemon1 = context.getBean(Ivysaur.class);
-        //BattlePokemon battlePokemon2 = context.getBean(Snorlax.class);
-        //BattlePokemon battlePokemon3 = context.getBean(Geodude.class);
+        context.getBean(GymNoticeService.class).printNotice();
 
-        GymLeaderService leader = context.getBean(GymLeaderService.class);
+        GymInfoProperties info = context.getBean(GymInfoProperties.class);
+        System.out.println("배지 이름: " + info.getBadge().getType() + " (난이도 " + info.getBadge().getDifficulty() + ")");
 
-        //leader.openGymBattle();
-
+        //context.getBean(GymEnvironmentChecker.class).printActiveProfile();
 
         context.close();
     }

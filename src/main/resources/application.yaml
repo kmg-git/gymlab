@@ -1,3 +1,12 @@
 spring:
   application:
     name: gymlab
+
+
+gym:
+  info:
+    name: "실전 배틀 체육관"
+    entry-fee: 5000
+    badge:
+      type: "암반 배지"
+      difficulty: 3
